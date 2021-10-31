@@ -1,8 +1,7 @@
+
+#small initial code to scrap trading/stock data from yahoo finance using daa reader.
 import pandas_datareader.data as web
 
-
-
-#2021-05-3
 
 
 def DataScraping(ticker,st_date,ed_date):
