@@ -1,5 +1,5 @@
-# Internship_projects
-Machine Learning Projects during internship
+# Internship - Finding performance measure for different trading stocks using best strategies
+
 
 This is a project done during my Internship for 4 months. This project in simple words to understand how trading differes with different stocks and also provide an insight on how we can do trading based on different best strategies for better trading result.
 
