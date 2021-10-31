@@ -1,0 +1,196 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - Hé
+    - Bonjour
+    - salut
+    - Bonjour
+    - Bonjour
+    - Bonsoir
+    - moin
+    - salut
+    - allons-y
+    - salut mec
+    - Bonjour
+    - Bonsoir
+    - bonne après-midi
+
+- intent: goodbye
+  examples: |
+    - bonne après-midi
+    - cu
+    - au revoir
+    - à plus tard
+    - Bonsoir
+    - au revoir
+    - Au revoir
+    - bonne journée
+    - À un de ces quatre
+    - Bye Bye
+
+- intent: affirm
+  examples: |
+    - Oui
+    - oui
+    - En effet
+    - bien sûr
+    - Ça a l'air bien
+    - correct
+    - Bien sur
+    - Oui bien sûr
+
+- intent: deny
+  examples: |
+    - non
+    - m
+    - jamais
+    - je ne pense pas
+    - n'aime pas ça
+    - certainement pas
+    - pas vraiment
+    - non
+
+- intent: mood_great
+  examples: |
+    - parfait
+    - génial
+    - étonnante
+    - se sentir comme un roi
+    - magnifique
+    - je me sens très bien
+    - Je suis génial
+    - Je suis génial
+    - je vais sauver le monde
+    - super content
+    - extrêmement bon
+    - tellement tellement parfait
+    - si bon
+    - tellement parfait
+
+
+- intent: mood_unhappy
+  examples: |
+    - ma journée a été horrible
+    - Je suis triste
+    - je ne me sens pas très bien
+    - je suis déçu
+    - super triste
+    - Je suis tellement triste
+    - triste
+    - très triste
+    - malheureux
+    - pas bon
+    - pas très bien
+    - extrêmement triste
+    - tellement triste
+    - si triste
+
+- intent: bot_challenge
+  examples: |
+    - Etes-vous un robot?
+    - Êtes-vous un être humain?
+    - est-ce que je parle à un bot ?
+    - est-ce que je parle à un humain ?
+
+- intent: tell_new_user
+  examples: |
+    - Oui, je suis un nouvel utilisateur
+    - Nouveau
+    - nouvel utilisateur
+    - Je suis nouveau ici
+
+- intent: know_about_multi_bot
+  examples: |
+    - Je veux en savoir plus sur le bot
+    - voulez en savoir plus sur le bot multilingue
+    - fonctionnement du bot multilingue
+    - Je veux vérifier le fonctionnement du bot multilingue
+ 
+ 
+
+- intent: tell_old_user
+  examples: |
+    - je suis un ancien utilisateur
+    - ancien utilisateur
+    - vieille
+    - Je suis un utilisateur existant
+    - utilisateur existant
+
+
+
+- intent: thank_you
+  examples: |
+    - Merci
+    - Je vous remercie
+    - Je vous remercie
+    - merci, merci.
+    - l'apprécier
+
+- intent: affirm_user_details
+  examples: |
+    - oui fournira des détails
+    - Oui 
+    - bien sûr doit fournir des détails
+    - Bien sur
+
+- intent: know_about_program
+  examples: |
+    - Je veux connaître le programme
+    - Intéressé par différents programmes
+    - Détails du programme
+    - informations sur le programme
+    - Je veux connaître les programmes
+    - Informations sur les programmes
+    - informations sur les programmes
+    - Informations sur le programme
+
+
+- intent: tell_program_name
+  examples: |
+    - Programme de partenariats en éducation
+    - programme de partenariats en éducation
+    - Programme de partenariat en éducation
+    - programme de partenariat éducatif
+    - Programme d'éducation
+    - programme d'éducation
+    - Programme d'éducation en partenariat
+    - Programme d'éducation aux partenariats
+    - programme d'éducation au partenariat
+    - programme d'éducation aux partenariats
+    - Programme de partenariat
+    - Programme de partenariats
+    - programme de partenariat
+    - programme de partenariats
+
+- intent: education_part_whocan_apply
+  examples: |
+    - qui peut postuler
+    - critères de candidature
+    - éligibilité pour postuler
+
+    
+
+- intent: deadline_education_part
+  examples: |
+    - quel est le délai
+    - date limite pour le programme
+    - date limite pour postuler
+
+
+    
+
+- intent: how_to_apply_ education_part
+  examples: |
+    - comment s'inscrire
+    - procédure pour postuler au programme
+    - protocole pour postuler au programme
+        
+    
+- intent: link_education_part
+  examples: |
+    - lien pour le programme
+    - lien pour le programme
+    - lien url du programme
+

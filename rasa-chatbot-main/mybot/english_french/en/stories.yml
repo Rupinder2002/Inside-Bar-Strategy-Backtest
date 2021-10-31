@@ -1,0 +1,159 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+  
+- story: get_started
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: getUserId
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: user_path_affirm_new
+  steps:
+  - intent: greet
+  - action: utter_greet
+  # - intent: know_about_multi_bot
+  # - action: utter_new_exhist_user
+  # - intent: tell_new_user       
+  # - action: utter_ask_user_details
+  # - checkpoint: Check_user_details
+
+# - story: user_path_affirm_new
+#   steps:
+#   - intent: greet
+#   - action: utter_greet  
+
+- story: confirm_userdetails
+  steps:
+  - checkpoint: Check_user_details
+  - intent: affirm
+  - action: action_submit
+
+- story: deny_userdetails
+  steps:
+  - checkpoint: Check_user_details
+  - intent: deny
+  - action: utter_goodbye
+
+- story: education_part_program_information
+  steps:
+  - intent: greet
+  - action: utter_greet
+  #- intent: know_about_program
+  #- action: utter_know_more_education_part
+
+- story: who_can_apply_path
+  steps:
+  - intent: whocan_apply
+  - action: action_who_can_apply   
+
+- story: deadline_path
+  steps:
+  - intent: deadline
+  - action: action_deadline
+
+- story: how_to_apply_path
+  steps:
+  - intent: how_to_apply
+  - action: action_how_to_apply
+
+- story: link_path
+  steps:
+  - intent: link
+  - action: action_link
+   
+  
+#- story: education_part_program_information_who_can_apply
+ # steps:
+  #- intent: greet
+  #- action: utter_greet
+  #- intent: know_about_program
+  #- action: utter_ask_program
+  #- intent: tell_program_name
+  #- action: utter_about_education_partnership_program
+  #- action: utter_know_more_education_part
+  #- intent: education_part_whocan_apply
+ # - action: utter_who_can_apply_education_part
+  #- intent: thank_you
+  #- action: utter_know_more_education_part
+  #- intent: deny
+  #- action: utter_goodbye 
+
+#- story: education_part_program_information_deadline
+#  steps:
+ # - intent: greet
+  #- action: utter_greet
+  #- intent: know_about_program
+  #- action: utter_ask_program
+  #- intent: tell_program_name
+  #- action: utter_about_education_partnership_program
+  #- action: utter_know_more_education_part
+  #- intent: deadline_education_part
+  #- action: utter_deadline_education_part
+  #- intent: thank_you
+  #- action: utter_know_more_education_part
+  #- intent: deny
+  #- action: utter_goodbye 
+
+#- story: education_part_program_information_how_to_apply
+ # steps:
+ # - intent: greet
+ # - action: utter_greet
+ # - intent: know_about_program
+ # - action: utter_ask_program
+ # - intent: tell_program_name
+ # - action: utter_about_education_partnership_program
+ # - action: utter_know_more_education_part
+ # - intent: how_to_apply_ education_part
+ # - action: utter_how_to_apply_education_part
+ # - intent: thank_you
+ # - action: utter_know_more_education_part
+ # - intent: deny
+ # - action: utter_goodbye 
+
+#- story: education_part_program_information_link
+#  steps:
+ # - intent: greet
+  #- action: utter_greet
+  #- intent: know_about_program
+  #- action: utter_ask_program
+  #- intent: tell_program_name
+  #- action: utter_about_education_partnership_program
+  #- action: utter_know_more_education_part
+  #- intent: link_education_part
+  #- action: utter_link_education_part
+  #- intent: thank_you
+  #- action: utter_know_more_education_part
+  #- intent: deny
+  #- action: utter_goodbye 
+  
+  
+
+ 

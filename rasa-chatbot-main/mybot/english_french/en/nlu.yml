@@ -1,0 +1,193 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - sure
+    - yes, sure
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - naah
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: tell_new_user
+  examples: |
+    - Yes, I am a new user
+    - new
+    - new user
+    - I am new here
+
+- intent: know_about_multi_bot
+  examples: |
+    - I want to know more about the bot
+    - want to know about the multilingual bot
+    - working of multilingual bot
+    - I want to check how multilingual bot works
+
+- intent: tell_old_user
+  examples: |
+    - I am a old user
+    - old user
+    - old
+    - I am an exhisting user
+    - exhisting user
+
+
+
+- intent: thank_you
+  examples: |
+    - Thanks
+    - thank you
+    - Thank You
+    - thanks, appreciate it.
+    - appreciate it
+
+- intent: affirm_user_details
+  examples: |
+    - yes will provide details
+    - yes 
+    - sure shall provide details
+    - sure
+
+- intent: know_about_program
+  examples: |
+    - I want to know about the program
+    - Interested about different programs
+    - Details of program
+    - program information
+    - I want to know about the programs
+    - Programs Information
+    - programs information
+    - Program Information
+
+
+- intent: tell_program_name
+  examples: |
+    - Education Partnerships Program
+    - education partnerships program
+    - Education Partnership Program
+    - education eartnership program
+    - Education Program
+    - education program
+    - Partnership Education Program
+    - Partnerships Education Program
+    - partnership education program
+    - partnerships education program
+    - Partnership Program
+    - Partnerships Program
+    - partnership program
+    - partnerships program
+
+- intent: whocan_apply
+  examples: |
+    - who can apply
+    - criteria for applying
+    - eligibility for applying
+
+    
+
+- intent: deadline
+  examples: |
+    - what is the deadline
+    - deadline for the program
+    - last date to apply
+
+    
+
+- intent: how_to_apply
+  examples: |
+    - how to apply
+    - procedure to apply to the program
+    - protocol to apply for the program
+
+    
+    
+- intent: link
+  examples: |
+    - link for program
+    - link for the program
+    - url link for the program

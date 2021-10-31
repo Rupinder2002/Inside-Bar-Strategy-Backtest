@@ -1,0 +1,56 @@
+version: "2.0"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Activate form
+  steps:
+  - intent: affirm_user_details
+  - action: user_details_form
+  - active_loop:  user_details_form
+
+- rule: Submit form
+  condition:
+  # Condition that form is active
+  - active_loop: user_details_form
+  steps:
+  # form is deactivated
+  - action: user_details_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  # Action we want to run when form is submitted
+  - action: action_submit
+  
+- rule: Activate program name form
+  steps:
+  - intent: know_about_program
+  - action: utter_ask_program
+  - action: program_name_form
+  - active_loop:  program_name_form
+
+- rule: Submit program name about_program form
+  condition:
+  # Condition that form is active
+  - active_loop: program_name_form
+  steps:
+  # form is deactivated
+  - action: program_name_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  # Action we want to run when form is submitted
+  - action: action_about_program
+  
+
+
+  

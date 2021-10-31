@@ -1,0 +1,209 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- tell_new_user:
+    use_entities: true
+- tell_old_user:
+    use_entities: true
+- know_about_multi_bot:
+    use_entities: true
+- tell_name:
+    use_entities:
+    - username
+- tell_email:
+    use_entities:
+    - email
+- tell_language:
+    use_entities:
+    - userLanguage
+- tell_password:
+    use_entities:
+    - password
+- thank_you:
+    use_entities: true
+- affirm_user_details:
+    use_entities: true
+- know_about_program:
+    use_entities: true
+- tell_program_name:
+    use_entities: true
+- whocan_apply:
+    use_entities: true
+- deadline:
+    use_entities: true
+- how_to_apply:
+    use_entities: true
+- link:
+    use_entities: true
+entities:
+- username
+- email
+- userLanguage
+- password
+- program_name
+- userId
+slots:
+  userId:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: false
+    influence_conversation: true
+  username:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: false
+    influence_conversation: true
+  email:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: false
+    influence_conversation: true
+  userLanguage:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: false
+    influence_conversation: true
+  password:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: false
+    influence_conversation: true
+  program_name:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: false
+    influence_conversation: true
+  requested_slot:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+responses:
+  utter_greet:
+  - text: Hey! I am a multilingual bot by Stablehacks! how may I help you?
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: It was nice having a conversation with you. Bye, take care have a nice one!!
+  utter_iamabot:
+  - text: I am a multilingualbot!, powered by Stablehacks.
+  utter_ask_username:
+  - text: What is your name?
+  utter_ask_email:
+  - text: what is your email address?
+  utter_ask_userLanguage:
+  - text: What is your preferred language? English or French?
+  utter_confirm_details:
+  - text: Please confirm whether details provided are correct?, yes or no?
+  utter_thankyou_details:
+  - text: |-
+      Thank You for providing the details.
+       username : {username}
+       email : {email}
+       userLanguage : {userLanguage}
+       password : {password}
+  utter_new_exhist_user:
+  - text: Are you new user or an exhisting one?
+  utter_ask_password:
+  - text: Please provide password.
+  utter_ask_user_details:
+  - text: Well, I need some information of yours before proceeding, is that ok?.
+  utter_know_more_education_part:
+  - buttons:
+    - payload: /whocan_apply
+      title: Who can apply
+    - payload: /deadline
+      title: Deadline
+    - payload: /how_to_apply
+      title: How to apply
+    - payload: /link
+      title: Link
+    - payload: /deny
+      title: Finish
+    text: Do you want to know more?
+  utter_ask_program:
+  - text: Welcome to Stablehacks programs infobot. Which program do you want to know about? 1. Education Partnerships Program
+  utter_ask_type_program_info:
+  - text: Please type program information
+  utter_about_education_partnership_program:
+  - text: The Education Partnerships Program (EPP) aims to advance First Nations elementary and secondary student achievement in First Nations, provincial and territorial schools. It:It has 3 distinct components:The result will be concrete benefits for the students, teachers and administrators involved, which should lead to improved educational outcomes for First Nations students.
+  utter_who_can_apply_education_part:
+  - text: Applicants who may be eligible to receive funding through the Partnerships component of the EPP are First Nations First Nations education authorities tribal councils mandated by First Nations First Nations organizations mandated by First Nations Eligible regional First Nations organizations must meet the following criteria have demonstrated support from First Nations communities or schools undertake, as a key function, elementary and secondary education support for groups of First Nations communities or schools agree to produce publicly available annual reports on education partnership projects and expenditures. Applicants who may be eligible to receive funding through the Structural Readiness component of the EPP are band councils organizations designated by a band council designated First Nations regional management organizations who currently undertake, as a key function, elementary and secondary support for a defined group of band-operated schools Organizations designated by a band council and First Nations regional management organizations must have support from First Nations communities or schools undertake, as a key function. Elementary and secondary education support for groups of First Nations communities or schools agree to produce publicly available annual reports on structural readiness projects and expenditures Entities such as bands or First Nations organizations that are delivering education services under a self-government agreement are not eligible to apply to the Structural Readiness component. Organizations do not need to have a partnerships arrangement to apply for the Structural Readiness component of the EPP. Applicants who may be eligible to receive funding through the Regional Education Agreement component of the EPP are First Nations First Nations education authorities tribal councils or organizations mandated by First Nations
+  utter_deadline_education_part:
+  - text: The deadline to submit a proposal is April 21, 2021 at 11:59 pm Eastern time for the Partnerships and the Structural Readiness components. The deadline to submit a work plan is December 31, 2021 at 11:59 pm Eastern time for the Regional Education Agreement component.
+  utter_how_to_apply_education_part:
+  - text: Applicants for the Partnerships and Structural Readiness components may only submit a 1-year proposal for 2021 to 2022, using the 2021 to 2022 data collection instrument found through the ISC Services Portal. If you do not have access to the portal or want to submit your application using a compatible format, such as Microsoft or Excel, contact your regional office. For the purpose of the Partnerships and Structural Readiness components of EPP, both components use the same proposal template, however, each component has different eligibility criteria and guidelines. For more information or to submit you Regional Education Agreement work plans, contact your regional office.For the purpose of all call for proposal processes, the existing terms and conditions apply. More details on the application process, eligible activities, eligible recipients and the monitoring process can be found in:Other reference
+  utter_link_education_part:
+  - text: Here is the Link https://www.sac-isc.gc.ca/eng/1100100033760/1531318318178
+  
+actions:
+  - utter_greet
+  - utter_ask_program
+  - utter_about_education_partnership_program
+  - utter_know_more_education_part
+  - utter_who_can_apply_education_part
+  - utter_deadline_education_part
+  - utter_how_to_apply_education_part
+  - utter_link_education_part
+  - utter_ask_user_details
+  - utter_new_exhist_user
+  - utter_thankyou_details
+  - utter_confirm_details
+  - utter_ask_userLanguage
+  - utter_ask_email
+  - utter_ask_password
+  - utter_iamabot
+  - utter_happy
+  - utter_goodbye
+  - utter_cheer_up
+  - utter_did_that_help
+  - utter_ask_username
+  - action_submit
+  - action_about_program
+  - action_who_can_apply
+  - action_how_to_apply
+  - action_link
+  - getUserId
+  - action_deadline
+
+forms:
+  user_details_form:
+    required_slots:
+      email:
+      - entity: email
+        type: from_text
+      password:
+      - entity: password
+        type: from_text
+      userLanguage:
+      - entity: userLanguage
+        type: from_text
+      username:
+      - entity: username
+        type: from_text
+  program_name_form:
+    required_slots:
+      program_name:
+      - entity: program_name
+        type: from_text
+e2e_actions: []
